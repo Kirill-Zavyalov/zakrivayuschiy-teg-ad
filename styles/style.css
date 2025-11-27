@@ -9,8 +9,306 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
   min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-block-size: 100dvh;
+  background-color: white;
+  background-image: var(--background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+\\ header
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-content {
+  margin: 96px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--width-cards);
+  min-height: clamp(20.44rem, 19rem + 5vw, 23rem);
+  padding: var(--header-padding);
+  border: 2px solid var(--borders-color);
+  gap: 19px;
+  background-color: var(--background-color);
+}
+
+.header-title {
+  font-family: var(--header-font);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: 1;
+  text-align: center;
+}
+
+.header-subtitle{
+  font-family: var(--header-font);
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  line-height: 1;
+  text-align: center;
+}
+
+\\ main
+
+.articles {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+}
+
+.article {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--width-cards);
+  min-height: clamp(20.4375rem, 19.285rem + 4.913vw, 23rem);
+  border: 2px solid var(--borders-color);
+  background-color: var(--background-color);
+  margin-bottom: 5vw;
+}
+
+.cards-title {
+  font-family: var(--cards-font);
+  font-size: var(--card-size-title);
+  font-weight: bold;
+  padding: 4px 10px 6px;
+  border: 2px solid var(--border-color);
+  z-index: 10;
+}
+
+.car-image-container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 38vw;
+}
+
+.cards-images {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--borders-color);
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.label {
+  position: absolute;
+  z-index: 2;
+  opacity: 0.6;
+  color: var(--label-color);
+  font-family: var(--header-font);
+  font-size: 15px;
+  line-height: normal;
+  text-shadow: 1px 0 0 var(--background-color),
+  -1px 0 0 var(--background-color),
+  0 1px 0 var(--background-color),
+  0 -1px 0 var(--background-color);
+  mix-blend-mode: hard-light;
+  right: 25px;
+  top: 25px;
+}
+
+.card-text {
+  font-family: var(--cards-font);
+  font-size: var(--card-size-title);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 20px;
+}
+
+.buttons-like {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0px;
+}
+
+
+
+.button__text {
+  font-family: var(--header-font);
+  align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  inline-size: 40px;
+  block-size: 40px;
+  margin-bottom: 1vw;
+  margin-right: 1rem;
+}
+
+.card__like-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 125px;
+  height: 36px;
+  padding: 11px 16px;
+  border: 2px solid var(--borders-color);
+  background: var(--background-color);
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 1vw;
+  margin-right: 1rem;
+}
+
+.card__like-button:hover {
+  background: black;
+  color: white;
+}
+
+
+
+
+
+\\ filter\\
+
+.filter-1 {
+  filter: brightness(200%) contrast(200%) grayscale(100%);
+  /* Высокий контраст и насыщенность с зеленым оттенком */
+}
+
+.filter-2 {
+ filter: hue-rotate(90deg) saturate(200%);
+}
+
+.filter-3 {
+  filter: invert(100%) hue-rotate(180deg) saturate(300%) contrast(150%);
+  /* Неоново-циановый инвертированный эффект */
+}
+
+.filter-4 {
+  filter: blur(6px) brightness(70%) saturate(80%) opacity(90%);
+  /* Размытый и приглушенный dream-эффект */
+}
+
+.filter-5 {
+  filter: hue-rotate(280deg) saturate(250%) contrast(180%) brightness(90%);
+  /* Яркий фиолетово-пурпурный психоделический эффект */
+}
+
+.filter-6 {
+  filter: grayscale(60%) contrast(200%) brightness(130%) invert(20%);
+  /* Высококонтрастный черно-белый с легкой инверсией */
+}
+
+.filter-7 {
+  filter: saturate(150%) hue-rotate(100deg) contrast(120%) drop-shadow(0 0 8px green);
+}
+
+\\ dialog \\
+
+/* Обертка секции с кнопкой */
+.save-section {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;       
+}
+
+
+
+/* Модальное окно */
+.save-modal {
+  display: grid;
+  grid-template-areas:
+    "icon content"
+    "control control";
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  border: 2px solid black;
+  color: black;
+  font-family: var(--header-font);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: white;
+  max-inline-size: 355px;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.save-modal[open] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.save-modal::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+
+/* Иконка внутри модального окна */
+.save-modal__icon {
+  grid-area: icon;
+  align-self: center;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+/* Текст в модальном окне */
+.save-modal__text {
+  grid-area: content;
+  align-self: center;
+  justify-self: start;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Контейнер для кнопки */
+.save-modal__control {
+  grid-area: control;
+}
+
+/* Кнопка в модальном окне */
+.save-modal__button {
+  inline-size: 100%;
+  height: 38px;
+  border: 2px solid black;
+  background: white;
+  font-family: var(--header-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 17px;
+  transition: background-color 0.3s ease;
+}
+
+.save-modal__button:hover {
+  background: black;
+  color: white;
+}
+
+.save-button__text {
+  font-family: var(--header-font);
+}
+
+.save-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
