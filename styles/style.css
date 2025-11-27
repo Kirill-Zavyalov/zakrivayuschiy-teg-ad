@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: center;
   max-width: var(--width-cards);
-  min-height: clamp(20.44rem, 19rem + 5vw, 23rem);
+  min-height: clamp(20.4rem, 19rem + 5vw, 23rem);
   padding: var(--header-padding);
   border: 2px solid var(--borders-color);
   gap: 19px;
@@ -42,7 +42,7 @@
 
 .header-title {
   font-family: var(--header-font);
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: clamp(3rem, 2.7104rem + 1.5vw, 4.0625rem);
   line-height: 1;
   text-align: center;
 }
