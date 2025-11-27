@@ -9,3 +9,95 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+.like-icon .center {
+  fill: white;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .body-main {
+  fill: white;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .outline {
+  fill: black;
+  transition: fill 0.1s linear;
+}
+
+.like-icon .love-shape {
+  transform-origin: center;
+}
+
+.like-icon .sparkles {
+  opacity: 0;
+}
+
+.like-icon:hover .center {
+  fill: black;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .body-main {
+  fill: black;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .center {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .body-main {
+  fill: red;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .center {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .body-main {
+  fill: red;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .outline {
+  fill: red;
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .love-shape {
+  animation: heart 0.3s ease-in 0.1s 1 alternate;
+}
+
+.like-icon.is-liked .sparkles {
+  animation: sparks 0.3s ease-in 0.3s 1 alternate;
+}
+
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(4px);
+  }
+}
