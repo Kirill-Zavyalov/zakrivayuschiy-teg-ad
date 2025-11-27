@@ -42,7 +42,7 @@
 
 .header-title {
   font-family: var(--header-font);
-  font-size: clamp(3rem, 2.7104rem + 1.5vw, 4.0625rem);
+  font-size: clamp(3rem, 2.72rem + 1.5vw, 4rem);
   line-height: 1;
   text-align: center;
 }
